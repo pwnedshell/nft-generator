@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.1.2
+
+### Patch Changes
+
+- 6a9065d: Allow package to be published in NPM within the changeset configuration
+
 ## 0.1.1
 
 ### Patch Changes
