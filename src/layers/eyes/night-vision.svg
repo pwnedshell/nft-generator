@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" version="1.1">
+    <!-- Night vision goggles - moved slightly to the right -->
+    <path
+        d="M 185 170 L 185 214 215 225 L 245 225 265 225 L 300 225 330 214 L 330 170 300 159 L 265 159 245 159 L 215 159 185 170"
+        stroke="none" fill="#1a472a" fill-rule="evenodd" />
+    <!-- Large lenses - moved right -->
+    <circle cx="225" cy="192" r="30" fill="#0d2818" stroke="#2d5a3d" stroke-width="3" />
+    <circle cx="310" cy="192" r="30" fill="#0d2818" stroke="#2d5a3d" stroke-width="3" />
+    <!-- Inner lenses -->
+    <circle cx="225" cy="192" r="24" fill="#1a472a" stroke="#4a7c59" stroke-width="2" />
+    <circle cx="310" cy="192" r="24" fill="#1a472a" stroke="#4a7c59" stroke-width="2" />
+    <!-- Green glow -->
+    <circle cx="225" cy="192" r="18" fill="rgba(0,255,0,0.3)" stroke="#00ff00" stroke-width="1" />
+    <circle cx="310" cy="192" r="18" fill="rgba(0,255,0,0.3)" stroke="#00ff00" stroke-width="1" />
+    <!-- Central bridge with scope - moved right -->
+    <path d="M 250 185 L 250 199 285 199 L 285 185 250 185" stroke="none" fill="#2d5a3d"
+        fill-rule="evenodd" />
+    <circle cx="267" cy="192" r="6" fill="#0d2818" stroke="#4a7c59" stroke-width="1" />
+    <!-- Head straps - moved right -->
+    <path d="M 185 185 L 170 185 170 199 L 185 199" stroke="none" fill="#1a472a" fill-rule="evenodd" />
+    <path d="M 330 185 L 345 185 345 199 L 330 199" stroke="none" fill="#1a472a" fill-rule="evenodd" />
+</svg>

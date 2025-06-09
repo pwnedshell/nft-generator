@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "types/*": ["src/types/*"],
+            "@layers/*": ["src/layers/*"]
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*", "src/types/svg.d.ts", "src/types/imul.d.ts"]
+}

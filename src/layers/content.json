@@ -1,0 +1,86 @@
+{
+    "layers": [
+        {
+            "id": "background",
+            "probability": 1.0,
+            "options": [{ "id": "blue", "weight": 1 }]
+        },
+        {
+            "id": "head",
+            "probability": 1.0,
+            "options": [
+                { "id": "albino", "weight": 0.25 },
+                { "id": "light", "weight": 1 },
+                { "id": "mid", "weight": 1 },
+                { "id": "skeleton", "weight": 0.1 },
+                { "id": "zombie", "weight": 0.1 }
+            ]
+        },
+        {
+            "id": "shirt",
+            "probability": 1.0,
+            "options": [
+                { "id": "flames", "weight": 0.2 },
+                { "id": "pinata", "weight": 0.4 },
+                {
+                    "id": "purple_blue_pink",
+                    "weight": 1
+                },
+                {
+                    "id": "stripes_blue_white",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "id": "top",
+            "probability": 0.5,
+            "options": [
+                { "id": "cap", "weight": 1 },
+                { "id": "cowboy", "weight": 0.5 },
+                { "id": "einstein", "weight": 0.1 },
+                { "id": "fez", "weight": 0.2 },
+                { "id": "like_a_sir", "weight": 0.3 }
+            ]
+        },
+        {
+            "id": "facial_hair",
+            "probability": 0.5,
+            "options": [
+                { "id": "goatee", "weight": 1 },
+                {
+                    "id": "long_beard",
+                    "weight": 1
+                },
+                {
+                    "id": "mutton_chops",
+                    "weight": 1
+                }
+            ]
+        },
+        {
+            "id": "eyes",
+            "probability": 0.25,
+            "options": [
+                { "id": "3d", "weight": 1 },
+                { "id": "eyes_laser", "weight": 0.25 },
+                {
+                    "id": "square_shades",
+                    "weight": 1
+                },
+                {
+                    "id": "angry_glasses",
+                    "weight": 0.25
+                },
+                {
+                    "id": "welding_mask",
+                    "weight": 0.01
+                },
+                {
+                    "id": "night_vision",
+                    "weight": 0.1
+                }
+            ]
+        }
+    ]
+}
