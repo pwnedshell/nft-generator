@@ -29,13 +29,8 @@ jobs:
           node-version: '22.14.0'
           cache: 'pnpm'
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: "pnpm"
-
       - run: pnpm install --frozen-lockfile
-      
+
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
