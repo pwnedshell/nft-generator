@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.2.0
+
+### Minor Changes
+
+- 7a51416: Rename package
+
 ## 0.1.2
 
 ### Patch Changes
