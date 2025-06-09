@@ -1,11 +1,6 @@
 {
     "layers": [
         {
-            "id": "background",
-            "probability": 1.0,
-            "options": [{ "id": "blue", "weight": 1 }]
-        },
-        {
             "id": "head",
             "probability": 1.0,
             "options": [

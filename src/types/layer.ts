@@ -1,4 +1,4 @@
-export interface LayerOption {
+export interface Option {
     id: string
     weight?: number
 }
@@ -6,5 +6,5 @@ export interface LayerOption {
 export interface Layer {
     id: string
     probability: number
-    options: LayerOption[]
+    options: Option[]
 }

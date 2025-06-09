@@ -1,6 +1,6 @@
-import { Layer, LayerOption } from 'types/layer'
+import { Layer, Option } from 'types/layer'
 import { svgMap } from '@layers/svgs'
-import content from '@layers/content.json'
+import metadata from '@layers/metadata.json'
 
 function mulberry32(seed: number) {
     return function () {
@@ -20,7 +20,7 @@ function xmur3(str: string): () => number {
     return () => h >>> 0
 }
 
-function pickWeighted(options: LayerOption[], rand: () => number): LayerOption {
+function pickWeighted(options: Option[], rand: () => number): Option {
     const total = options.reduce((acc, o) => acc + (o.weight ?? 1), 0)
     let r = rand() * total
     for (const option of options) {
@@ -31,7 +31,7 @@ function pickWeighted(options: LayerOption[], rand: () => number): LayerOption {
 }
 
 function randomlySelectLayers(layers: Layer[], rand: () => number) {
-    const selected: { layerName: string; option: LayerOption }[] = []
+    const selected: { layerName: string; option: Option }[] = []
 
     for (const layer of layers) {
         if (rand() <= (layer.probability ?? 1.0)) {
@@ -50,11 +50,14 @@ function extractInnerSVG(content: string): string {
     return `<g>${content.slice(innerStart, end).trim()}</g>`
 }
 
-export function generateNFT(seed: string = ''): string {
+export function generateNFT(
+    seed: string = '',
+    background: string = 'transparent'
+): string {
     const hashSeed = xmur3(seed)()
     const rand = mulberry32(hashSeed)
 
-    const layers = content.layers as Layer[]
+    const layers = metadata.layers as Layer[]
     const selectedLayers = randomlySelectLayers(layers, rand)
 
     const innerSVGs = selectedLayers.map(({ option }) => {
@@ -62,5 +65,5 @@ export function generateNFT(seed: string = ''): string {
         return extractInnerSVG(rawSVG)
     })
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">\n${innerSVGs.join('\n')}\n</svg>`
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">\n<rect width="100%" height="100%" fill="${encodeURI(background)}"/>\n${innerSVGs.join('\n')}\n</svg>`
 }
