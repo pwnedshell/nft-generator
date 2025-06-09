@@ -1,6 +1,6 @@
 {
     "name": "nft-generator",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "license": "MIT",
     "private": true,
     "description": "A simple library to generate a random NFT",
