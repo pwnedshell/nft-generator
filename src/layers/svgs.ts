@@ -1,4 +1,3 @@
-import { default as background_blue } from '@layers/background/blue.svg'
 import { default as eyes_3d } from '@layers/eyes/3d.svg'
 import { default as eyes_angry_glasses } from '@layers/eyes/angry-glasses.svg'
 import { default as eyes_laser } from '@layers/eyes/laser.svg'
@@ -24,7 +23,6 @@ import { default as top_fez } from '@layers/top/fez.svg'
 import { default as top_like_a_sir } from '@layers/top/like-a-sir.svg'
 
 export const svgMap: Record<string, string> = {
-    blue: background_blue,
     '3d': eyes_3d,
     angry_glasses: eyes_angry_glasses,
     eyes_laser: eyes_laser,
