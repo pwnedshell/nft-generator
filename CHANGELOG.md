@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.4.0
+
+### Minor Changes
+
+- 994fc06: Add options object
+
 ## 0.3.0
 
 ### Minor Changes
