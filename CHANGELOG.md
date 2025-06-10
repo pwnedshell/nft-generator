@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.4.1
+
+### Patch Changes
+
+- d6bb419: Fix options
+
 ## 0.4.0
 
 ### Minor Changes
