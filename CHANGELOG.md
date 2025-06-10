@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.3.0
+
+### Minor Changes
+
+- c873052: Add options for width, height and class
+
 ## 0.2.0
 
 ### Minor Changes
