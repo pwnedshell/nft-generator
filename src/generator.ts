@@ -52,7 +52,7 @@ function extractInnerSVG(content: string): string {
 
 export function generateNFT(
     seed: string = '',
-    options: {
+    options?: {
         background?: string
         classname?: string
         width?: number
@@ -70,5 +70,5 @@ export function generateNFT(
         return extractInnerSVG(rawSVG)
     })
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" class="${options.classname ? encodeURI(options.classname) : 'transparent'}" ${options.width ? `width="${options.width}"` : ''} ${options.height ? `height="${options.height}"` : ''} viewBox="0 0 500 500">\n<rect width="100%" height="100%" fill="${encodeURI(options.background)}"/>\n${innerSVGs.join('\n')}\n</svg>`
+    return `<svg xmlns="http://www.w3.org/2000/svg" class="${encodeURI(options.classname)}" ${options.width ? `width="${options.width}"` : ''} ${options.height ? `height="${options.height}"` : ''} viewBox="0 0 500 500">\n<rect width="100%" height="100%" fill="${options.background ? encodeURI(options.background) : 'transparent'}"/>\n${innerSVGs.join('\n')}\n</svg>`
 }
