@@ -50,6 +50,19 @@ function extractInnerSVG(content: string): string {
     return `<g>${content.slice(innerStart, end).trim()}</g>`
 }
 
+function sanitize(text: string) {
+    if (!text) return ''
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        '/': '&#x2F;'
+    }
+    return text.replace(/[&<>"'/]/gi, (match) => map[match])
+}
+
 export function generateNFT(
     seed: string = '',
     options?: {
@@ -70,5 +83,5 @@ export function generateNFT(
         return extractInnerSVG(rawSVG)
     })
 
-    return `<svg xmlns="http://www.w3.org/2000/svg" class="${encodeURI(options.classname)}" ${options.width ? `width="${options.width}"` : ''} ${options.height ? `height="${options.height}"` : ''} viewBox="0 0 500 500">\n<rect width="100%" height="100%" fill="${options.background ? encodeURI(options.background) : 'transparent'}"/>\n${innerSVGs.join('\n')}\n</svg>`
+    return `<svg xmlns="http://www.w3.org/2000/svg" class="${sanitize(options?.classname)}" ${options?.width ? `width="${options?.width}"` : ''} ${options?.height ? `height="${options?.height}"` : ''} viewBox="0 0 500 500">\n<rect width="100%" height="100%" fill="${options?.background ? sanitize(options?.background) : 'transparent'}"/>\n${innerSVGs.join('\n')}\n</svg>`
 }
