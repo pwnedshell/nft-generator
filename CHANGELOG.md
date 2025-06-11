@@ -1,5 +1,11 @@
 # nft-generator
 
+## 0.4.2
+
+### Patch Changes
+
+- a59ec21: Add sanitize function
+
 ## 0.4.1
 
 ### Patch Changes
